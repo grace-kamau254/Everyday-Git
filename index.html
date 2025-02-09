@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Git</title>
+</head>
+<body>
+    <h1>Everyday Git</h1>
+    <h2>What is Git?</h2>
+    <h3>Definition</h3>
+    <p>
+        GIT isa version control system used to track changes in source code during software development. It allows multiple developers to collaborate on a project by enabling them to track and merge changes efficiently.
+    </p>
+    <h3>Git as a version control system</h3>
+    <p>
+    A version control system helps manage changes to files and directories over time.Some other popular alternatives version control systems to GIT include:
+    <ol>
+        <li>Subversion(SVN)</li>
+        <li>Mercurial</li>
+    </ol>
+    However GIT is widely regarded as the most popular due to its flexibility, speed, and disturbed nature.
+     In this blog we`ll focus on GIT and GitHub (a platform that uses GIT).
+        </p>
+        <h2>
+            How to install Git
+        </h2>
+        <p>
+            Before the installation, it's important to confirm whether you have git installed on your computer. You do this by running the code "git --version".
+             If you notice a version number, then you have it installed. 
+             There are also a few ways to install Git on Windows. The most official build is available for download on the Git website. Just go to https://git-scm.com/download/win and the download will start automatically. Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to https://gitforwindows.org.
+
+             To get an automated installation you can use the Git Chocolatey package. Note that the Chocolatey package is community maintained.
+             <div>
+                <figure>
+        <img src="./Images/Confirm git.PNG">
+                </figure>
+             </div>
+
+        </p>
+<h2>
+    Configuring Git
+</h2>
+<p>
+    To configure git usename and email, you type the following commands:
+    <ol>
+        <li>
+            git config --global user.name "name"
+        </li>
+        <li>
+            git config --global user.email "email"
+        </li>
+        <li>
+            To confirm configuration, use the code "git config --list"
+        </li>
+    </ol>
+    <div>
+        <figure>
+            <img src="./Images/Git.PNG">
+        </figure>
+    </div>
+</p>
+<h2>
+    Initializing Git Repository
+</h2>
+<p>
+    Initializing a Git repository is a simple process. First, open a terminal and navigate to your project’s directory. Next, run the command git init. This creates a hidden .git folder that stores your repository’s history, configuration, and metadata. 
+</p>
+<h2>
+    Adding Files and Committing Changes
+</h2>
+<p>
+    Once initialized, add your files with"git add". Create your initial commit using"git commit" This process sets up version control for your project, allowing you to track changes, revert updates, and collaborate with others. You can also connect your repository to remote servers with git remote add for additional backup and collaborative capabilities. This simple initialization empowers efficient project management.
+    Provide further description in the body if needed. To view past commits, use “git log” to display commit history. You can use “git log –oneline” for a simplified view. To return to a particular commit, use “git checkout <commit-hash>” to switch to that commit. Alternatively, “git revert <commit-hash>” creates a new commit that undoes changes made by a previous commit, which preserves history. for 8 seconds
+        Writing a good commit message is essential. Use the imperative mood, keep it concise, and describe the changes clearly. Start with a brief summary, followed by an optional detailed explanation if needed. To view past commits, use the command “git log” which lists commit history with messages, authors, and dates. To go back to a particular commit, use “git checkout <commit-hash>” to temporarily view that commit or “git reset --hard <commit-hash>” to permanently move the branch pointer. These commands empower you to maintain a clear project history and navigate changes effectively. Commit messages and history review are crucial for collaboration.
+        
+</p>
+<h2>
+    Branches
+</h2>
+<p>
+    A branch is a movable pointer to a specific commit that represents an independent line of development. It allows you to isolate work on features, fixes, or experiments without impacting the main codebase. When you create a new branch, Git simply creates a new pointer that starts at your current commit. As you make commits on that branch, the pointer advances, building a separate history. This flexibility makes branching essential for parallel development, enabling teams to work on multiple tasks simultaneously and merge changes later once they’re stable and reviewed.
+</p>
+<h3>
+    Creating a branch
+</h3>
+<p>
+    Creating a branch in Git is simple. Use the command “git branch <branch-name>” to generate a new branch pointer starting at your current commit. For convenience, you can combine branch creation and checkout using “git checkout -b <branch-name>”, immediately switching your working directory to the new branch. It simplifies collaboration.
+</p>
+<h3>
+    Viewing branches
+</h3>
+<p>
+    To view all branches in Git, use the command “git branch” for local branches or” git branch -a” to include remote branches. This command lists every branch in your repository, showing the current active branch clearly highlighted. It helps you track different lines of development and manage collaborative workflows effectively.
+</p>
+<h3>
+    Switching Branches
+</h3>
+<p>
+    To switch branches in Git, use the command: “git checkout <branch-name>”. This command moves you to the specified branch, updating your working directory to reflect its state. Before switching, ensure you commit or stash any changes to avoid conflicts or lost work.   
+</p>
+<h3>
+    Merging Branches
+</h3>
+<p>
+    To merge branches, first switch to the branch you want to merge changes into (typically the main branch). Then, execute: “git merge <branch-name>”. Git combines the histories. If conflicts occur, manually resolve them before completing the merge.
+</p>
+<h3>
+    Deleting branches
+</h3>
+<p>
+    To delete a branch locally in Git, use:
+    •	Safe Deletion: “git branch -d <branch-name>”.
+    This deletes the branch only if it’s fully merged.
+    •	Force Deletion: “git branch -D <branch-name>”.
+    Use this to force delete an unmerged branch.
+    For remote branches, execute: “git push origin --delete <branch-name>”.
+    This command removes the branch from the remote repository. Always ensure you’ve backed up any important work before deleting a branch.    
+</p>
+<H2>
+    Recommendation
+</H2>
+<p>
+    After mastering local Git operations, the next step is to delve into remote repository management and collaboration tools. Start by learning how to push, pull, and fetch changes from remote repositories, and then connect your local repository to platforms like GitHub, GitLab, or Bitbucket. This will enable you to manage pull requests, fork repositories, and contribute to open-source projects. Additionally, exploring advanced Git techniques—such as interactive rebasing, cherry-picking, and conflict resolution—will further refine your workflow and improve your version control skills, ultimately paving the way for more efficient team collaboration and project management.
+</p>
+</body>
+</html>
